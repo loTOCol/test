@@ -17,47 +17,41 @@ WalkingMate는 걷기 기록, 메이트 모집, 피드, 채팅을 한 앱에서 
 ### 인증
 한 줄 요약: 로그인/회원가입과 네이버 간편 로그인을 통해 빠르게 앱에 진입합니다.
 
-| 1사진 | 2사진 |
+| 로그인 화면 | 회원가입 화면 |
 |---|---|
 | <img src="./assets/screens/login-screen.jpg" width="180" /> | <img src="./assets/screens/signup-screen.jpg" width="180" /> |
-| 로그인 화면 | 회원가입 화면 |
 
 ### 메인 내비게이션
 한 줄 요약: 홈, 게시판, 캘린더, 채팅/랭킹을 하단 탭으로 이동하며 핵심 기능을 탐색합니다.
 
-| 1사진 | 2사진 | 3사진 | 4사진 | 5사진 |
+| 워킹 홈 대시보드 | 메이트 게시판 목록 | 기록 캘린더 | 채팅 탭 | 랭킹 탭 |
 |---|---|---|---|---|
 | <img src="./assets/screens/screen01.jpg" width="170" /> | <img src="./assets/screens/screen02.jpg" width="170" /> | <img src="./assets/screens/screen03.jpg" width="170" /> | <img src="./assets/screens/screen04.jpg" width="170" /> | <img src="./assets/screens/screen05.jpg" width="170" /> |
-| 워킹 홈 대시보드 | 메이트 게시판 목록 | 기록 캘린더 | 채팅 탭 | 랭킹 탭 |
 
 ### 트래킹/메이트
 한 줄 요약: 실시간 산책 기록, 종료 처리, 메이트 신청/신청자 관리를 한 흐름으로 제공합니다.
 
-| 1사진 | 2사진 | 3사진 | 4사진 | 5사진 |
+| 산책 트래킹 지도 | 산책 종료 다이얼로그 | 메이트 게시글 상세 | 피드 목록 | 신청 목록 관리 |
 |---|---|---|---|---|
 | <img src="./assets/screens/screen06.jpg" width="170" /> | <img src="./assets/screens/screen07.jpg" width="170" /> | <img src="./assets/screens/screen08.jpg" width="170" /> | <img src="./assets/screens/screen09.jpg" width="170" /> | <img src="./assets/screens/screen10.jpg" width="170" /> |
-| 산책 트래킹 지도 | 산책 종료 다이얼로그 | 메이트 게시글 상세 | 피드 목록 | 신청 목록 관리 |
 
 ### 채팅/프로필
 한 줄 요약: 1:1 채팅과 참가자 확인, 사용자 프로필 확인 및 상호작용을 지원합니다.
 
-| 1사진 | 2사진 | 3사진 |
+| 1:1 채팅 화면 | 채팅 참가자 목록 | 사용자 프로필 |
 |---|---|---|
 | <img src="./assets/screens/screen11.jpg" width="180" /> | <img src="./assets/screens/screen12.jpg" width="180" /> | <img src="./assets/screens/screen13.jpg" width="180" /> |
-| 1:1 채팅 화면 | 채팅 참가자 목록 | 사용자 프로필 |
 
 ### 음악 추천/템포 워킹
 한 줄 요약: 음악 유사도 추천과 BPM/템포 기반 재생으로 걷기 페이스를 조절합니다.
 
-| 1사진 | 2사진 | 3사진 | 4사진 |
+| 목표 걸음 설정 | 음악 추천 메인 | 추천 상세 분석 | 인터벌 트레이닝 |
 |---|---|---|---|
 | <img src="./assets/screens/screen14.jpg" width="170" /> | <img src="./assets/screens/screen15.jpg" width="170" /> | <img src="./assets/screens/screen16.jpg" width="170" /> | <img src="./assets/screens/screen17.jpg" width="170" /> |
-| 목표 걸음 설정 | 음악 추천 메인 | 추천 상세 분석 | 인터벌 트레이닝 |
 
-| 5사진 | 6사진 | 7사진 | 8사진 |
-|---|---|---|---|
-| <img src="./assets/screens/screen18.jpg" width="170" /> | <img src="./assets/screens/screen19.jpg" width="170" /> | <img src="./assets/screens/screen20.jpg" width="170" /> | <img src="./assets/screens/screen21.jpg" width="170" /> |
-| LOW 템포 재생 | MID 템포 재생 | FAST 템포 재생 | MAX 템포 재생 |
+| LOW 템포 재생 | MAX 템포 재생 |
+|---|---|
+| <img src="./assets/screens/screen18.jpg" width="170" /> | <img src="./assets/screens/screen21.jpg" width="170" /> |
 
 ## 기술 스택
 - Language: Java
