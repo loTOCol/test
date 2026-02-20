@@ -1,0 +1,885 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.92364851900282,
+          37.556774278906374
+        ]
+      },
+      "properties": {
+        "totalDistance": 1015,
+        "totalTime": 802,
+        "index": 0,
+        "pointIndex": 0,
+        "name": "",
+        "description": "31m 이동",
+        "direction": "",
+        "nearPoiName": "",
+        "nearPoiX": "0.0",
+        "nearPoiY": "0.0",
+        "intersectionName": "",
+        "facilityType": "14",
+        "facilityName": "",
+        "turnType": 200,
+        "pointType": "SP"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            126.92364851900282,
+            37.556774278906374
+          ],
+          [
+            126.92370962321058,
+            37.556821496731125
+          ],
+          [
+            126.92390126832917,
+            37.55696592780928
+          ]
+        ]
+      },
+      "properties": {
+        "index": 1,
+        "lineIndex": 0,
+        "name": "",
+        "description": ", 31m",
+        "distance": 31,
+        "time": 30,
+        "roadType": 24,
+        "categoryRoadType": 0,
+        "facilityType": "14",
+        "facilityName": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.92390126832917,
+          37.55696592780928
+        ]
+      },
+      "properties": {
+        "index": 2,
+        "pointIndex": 1,
+        "name": "홍대입구역  8번출구",
+        "description": "홍대입구역  8번출구 에서 우회전 후 33m 이동 ",
+        "direction": "",
+        "nearPoiName": "홍대입구역  8번출구",
+        "nearPoiX": "0.0",
+        "nearPoiY": "0.0",
+        "intersectionName": "",
+        "facilityType": "14",
+        "facilityName": "",
+        "turnType": 13,
+        "pointType": "GP"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            126.92390126832917,
+            37.55696592780928
+          ],
+          [
+            126.92405403539615,
+            37.556852054896595
+          ],
+          [
+            126.92414569166857,
+            37.55692427036115
+          ],
+          [
+            126.92418457724796,
+            37.556915938692605
+          ]
+        ]
+      },
+      "properties": {
+        "index": 3,
+        "lineIndex": 1,
+        "name": "",
+        "description": ", 33m",
+        "distance": 33,
+        "time": 34,
+        "roadType": 24,
+        "categoryRoadType": 0,
+        "facilityType": "14",
+        "facilityName": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.92418457724796,
+          37.556915938692605
+        ]
+      },
+      "properties": {
+        "index": 4,
+        "pointIndex": 2,
+        "name": "",
+        "description": "직진 후 보행자도로 을 따라 14m 이동 ",
+        "direction": "",
+        "nearPoiName": "",
+        "nearPoiX": "0.0",
+        "nearPoiY": "0.0",
+        "intersectionName": "홍대입구역8번출구",
+        "facilityType": "11",
+        "facilityName": "",
+        "turnType": 11,
+        "pointType": "GP"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            126.92418457724796,
+            37.556915938692605
+          ],
+          [
+            126.92432900946721,
+            37.556882611819624
+          ]
+        ]
+      },
+      "properties": {
+        "index": 5,
+        "lineIndex": 2,
+        "name": "보행자도로",
+        "description": "보행자도로, 14m",
+        "distance": 14,
+        "time": 10,
+        "roadType": 24,
+        "categoryRoadType": 1,
+        "facilityType": "11",
+        "facilityName": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            126.92432900946721,
+            37.556882611819624
+          ],
+          [
+            126.92462898949327,
+            37.556621536437405
+          ],
+          [
+            126.92502340786467,
+            37.55627158419173
+          ]
+        ]
+      },
+      "properties": {
+        "index": 6,
+        "lineIndex": 3,
+        "name": "",
+        "description": ", 91m",
+        "distance": 91,
+        "time": 70,
+        "roadType": 22,
+        "categoryRoadType": 1,
+        "facilityType": "11",
+        "facilityName": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.92502340786467,
+          37.55627158419173
+        ]
+      },
+      "properties": {
+        "index": 7,
+        "pointIndex": 3,
+        "name": "훼미리마트 홍대공원점",
+        "description": "훼미리마트 홍대공원점 에서 우회전 후 6m 이동 ",
+        "direction": "",
+        "nearPoiName": "훼미리마트 홍대공원점",
+        "nearPoiX": "0.0",
+        "nearPoiY": "0.0",
+        "intersectionName": "",
+        "facilityType": "11",
+        "facilityName": "",
+        "turnType": 13,
+        "pointType": "GP"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            126.92502340786467,
+            37.55627158419173
+          ],
+          [
+            126.92499563293248,
+            37.556260473875554
+          ],
+          [
+            126.92497063568169,
+            37.556243808699506
+          ]
+        ]
+      },
+      "properties": {
+        "index": 8,
+        "lineIndex": 4,
+        "name": "",
+        "description": ", 6m",
+        "distance": 6,
+        "time": 5,
+        "roadType": 0,
+        "categoryRoadType": 0,
+        "facilityType": "11",
+        "facilityName": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.92497063568169,
+          37.556243808699506
+        ]
+      },
+      "properties": {
+        "index": 9,
+        "pointIndex": 4,
+        "name": "훼미리마트 홍대공원점",
+        "description": "훼미리마트 홍대공원점 에서 좌회전 후 14m 이동 ",
+        "direction": "",
+        "nearPoiName": "훼미리마트 홍대공원점",
+        "nearPoiX": "0.0",
+        "nearPoiY": "0.0",
+        "intersectionName": "",
+        "facilityType": "11",
+        "facilityName": "",
+        "turnType": 12,
+        "pointType": "GP"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            126.92497063568169,
+            37.556243808699506
+          ],
+          [
+            126.92496508141669,
+            37.556216034052206
+          ],
+          [
+            126.92496508227926,
+            37.55618548204952
+          ],
+          [
+            126.9249900809415,
+            37.55615215303936
+          ],
+          [
+            126.92502063418243,
+            37.55613548885734
+          ]
+        ]
+      },
+      "properties": {
+        "index": 10,
+        "lineIndex": 5,
+        "name": "",
+        "description": ", 14m",
+        "distance": 14,
+        "time": 10,
+        "roadType": 0,
+        "categoryRoadType": 0,
+        "facilityType": "11",
+        "facilityName": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.92502063418243,
+          37.55613548885734
+        ]
+      },
+      "properties": {
+        "index": 11,
+        "pointIndex": 5,
+        "name": "형님저여요",
+        "description": "형님저여요 에서 우회전 후 어울마당로 을 따라 99m 이동 ",
+        "direction": "",
+        "nearPoiName": "형님저여요",
+        "nearPoiX": "0.0",
+        "nearPoiY": "0.0",
+        "intersectionName": "",
+        "facilityType": "11",
+        "facilityName": "",
+        "turnType": 13,
+        "pointType": "GP"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            126.92502063418243,
+            37.55613548885734
+          ],
+          [
+            126.92499841625978,
+            37.55605494227082
+          ],
+          [
+            126.92504841280014,
+            37.55601605879839
+          ],
+          [
+            126.9253206145225,
+            37.5558633036557
+          ],
+          [
+            126.92582335439296,
+            37.55558278971788
+          ]
+        ]
+      },
+      "properties": {
+        "index": 12,
+        "lineIndex": 6,
+        "name": "어울마당로",
+        "description": "어울마당로, 99m",
+        "distance": 99,
+        "time": 77,
+        "roadType": 0,
+        "categoryRoadType": 0,
+        "facilityType": "11",
+        "facilityName": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.92582335439296,
+          37.55558278971788
+        ]
+      },
+      "properties": {
+        "index": 13,
+        "pointIndex": 6,
+        "name": "꿈꾸는다락방",
+        "description": "꿈꾸는다락방 에서 우회전 후 57m 이동 ",
+        "direction": "",
+        "nearPoiName": "꿈꾸는다락방",
+        "nearPoiX": "0.0",
+        "nearPoiY": "0.0",
+        "intersectionName": "",
+        "facilityType": "11",
+        "facilityName": "",
+        "turnType": 13,
+        "pointType": "GP"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            126.92582335439296,
+            37.55558278971788
+          ],
+          [
+            126.92546228819367,
+            37.55515783267321
+          ]
+        ]
+      },
+      "properties": {
+        "index": 14,
+        "lineIndex": 7,
+        "name": "",
+        "description": ", 57m",
+        "distance": 57,
+        "time": 43,
+        "roadType": 0,
+        "categoryRoadType": 0,
+        "facilityType": "11",
+        "facilityName": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.92546228819367,
+          37.55515783267321
+        ]
+      },
+      "properties": {
+        "index": 15,
+        "pointIndex": 7,
+        "name": "원스샵",
+        "description": "원스샵 에서 좌회전 후 242m 이동 ",
+        "direction": "",
+        "nearPoiName": "원스샵",
+        "nearPoiX": "0.0",
+        "nearPoiY": "0.0",
+        "intersectionName": "",
+        "facilityType": "11",
+        "facilityName": "",
+        "turnType": 12,
+        "pointType": "GP"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            126.92546228819367,
+            37.55515783267321
+          ],
+          [
+            126.92598447105019,
+            37.55486620926375
+          ],
+          [
+            126.92651498632408,
+            37.55458014091298
+          ],
+          [
+            126.92704550152,
+            37.55429685001698
+          ],
+          [
+            126.92757046205924,
+            37.55399967174757
+          ],
+          [
+            126.9277148956124,
+            37.55391912814301
+          ]
+        ]
+      },
+      "properties": {
+        "index": 16,
+        "lineIndex": 8,
+        "name": "",
+        "description": ", 242m",
+        "distance": 242,
+        "time": 187,
+        "roadType": 0,
+        "categoryRoadType": 0,
+        "facilityType": "11",
+        "facilityName": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9277148956124,
+          37.55391912814301
+        ]
+      },
+      "properties": {
+        "index": 17,
+        "pointIndex": 8,
+        "name": "",
+        "description": "경유지 후 45m 이동 ",
+        "direction": "",
+        "nearPoiName": "",
+        "nearPoiX": "0.0",
+        "nearPoiY": "0.0",
+        "intersectionName": "",
+        "facilityType": "11",
+        "facilityName": "",
+        "turnType": 0,
+        "pointType": "PP1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            126.9277148956124,
+            37.55391912814301
+          ],
+          [
+            126.92813986354142,
+            37.5536830520898
+          ]
+        ]
+      },
+      "properties": {
+        "index": 18,
+        "lineIndex": 9,
+        "name": "",
+        "description": ", 45m",
+        "distance": 45,
+        "time": 35,
+        "roadType": 22,
+        "categoryRoadType": 1,
+        "facilityType": "11",
+        "facilityName": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.92813986354142,
+          37.5536830520898
+        ]
+      },
+      "properties": {
+        "index": 19,
+        "pointIndex": 9,
+        "name": "디자인창조의아침",
+        "description": "디자인창조의아침 에서 4시 방향 우회전 후 216m 이동 ",
+        "direction": "",
+        "nearPoiName": "디자인창조의아침",
+        "nearPoiX": "0.0",
+        "nearPoiY": "0.0",
+        "intersectionName": "",
+        "facilityType": "11",
+        "facilityName": "",
+        "turnType": 19,
+        "pointType": "GP"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            126.92813986354142,
+            37.5536830520898
+          ],
+          [
+            126.92703719348953,
+            37.55342750651533
+          ],
+          [
+            126.92684276817901,
+            37.553377508849685
+          ],
+          [
+            126.92664834279007,
+            37.55333028863888
+          ],
+          [
+            126.9264955793292,
+            37.55331639863127
+          ],
+          [
+            126.92630948518114,
+            37.55331639530126
+          ],
+          [
+            126.9260261768881,
+            37.55334416477975
+          ],
+          [
+            126.92598173641613,
+            37.553346941439344
+          ],
+          [
+            126.92593729578735,
+            37.553355273008535
+          ],
+          [
+            126.92589841028618,
+            37.55336082722232
+          ],
+          [
+            126.9257734215225,
+            37.5533663798954
+          ]
+        ]
+      },
+      "properties": {
+        "index": 20,
+        "lineIndex": 10,
+        "name": "",
+        "description": ", 216m",
+        "distance": 216,
+        "time": 154,
+        "roadType": 22,
+        "categoryRoadType": 1,
+        "facilityType": "11",
+        "facilityName": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9257734215225,
+          37.5533663798954
+        ]
+      },
+      "properties": {
+        "index": 21,
+        "pointIndex": 10,
+        "name": "",
+        "description": "경유지 후 와우산로 을 따라 132m 이동 ",
+        "direction": "",
+        "nearPoiName": "",
+        "nearPoiX": "0.0",
+        "nearPoiY": "0.0",
+        "intersectionName": "",
+        "facilityType": "11",
+        "facilityName": "",
+        "turnType": 0,
+        "pointType": "PP2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            126.9257734215225,
+            37.5533663798954
+          ],
+          [
+            126.92547067094945,
+            37.55338026175211
+          ],
+          [
+            126.92525680273162,
+            37.55333859610324
+          ],
+          [
+            126.92502904830212,
+            37.55324693601951
+          ],
+          [
+            126.92498460814379,
+            37.553238602859935
+          ],
+          [
+            126.92493739069609,
+            37.55322193728625
+          ],
+          [
+            126.92486239831604,
+            37.5531941613964
+          ],
+          [
+            126.92476518589602,
+            37.55316083019936
+          ],
+          [
+            126.92472074612971,
+            37.55313860976579
+          ],
+          [
+            126.92468463870198,
+            37.55312472184571
+          ],
+          [
+            126.92438466941691,
+            37.55300528592197
+          ]
+        ]
+      },
+      "properties": {
+        "index": 22,
+        "lineIndex": 11,
+        "name": "와우산로",
+        "description": "와우산로, 132m",
+        "distance": 132,
+        "time": 123,
+        "roadType": 21,
+        "categoryRoadType": 1,
+        "facilityType": "11",
+        "facilityName": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.92438466941691,
+          37.55300528592197
+        ]
+      },
+      "properties": {
+        "index": 23,
+        "pointIndex": 11,
+        "name": "호아빈 홍대점",
+        "description": "호아빈 홍대점 에서 좌측 횡단보도 후 보행자도로 을 따라 20m 이동 ",
+        "direction": "",
+        "nearPoiName": "호아빈 홍대점",
+        "nearPoiX": "0.0",
+        "nearPoiY": "0.0",
+        "intersectionName": "홍익대앞",
+        "facilityType": "15",
+        "facilityName": "",
+        "turnType": 212,
+        "pointType": "GP"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            126.92438466941691,
+            37.55300528592197
+          ],
+          [
+            126.92448466484962,
+            37.5528441953326
+          ]
+        ]
+      },
+      "properties": {
+        "index": 24,
+        "lineIndex": 12,
+        "name": "보행자도로",
+        "description": "보행자도로, 20m",
+        "distance": 20,
+        "time": 13,
+        "roadType": 21,
+        "categoryRoadType": 1,
+        "facilityType": "15",
+        "facilityName": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.92448466484962,
+          37.5528441953326
+        ]
+      },
+      "properties": {
+        "index": 25,
+        "pointIndex": 12,
+        "name": "세븐일레븐 홍대정문점",
+        "description": "세븐일레븐 홍대정문점 에서 우회전 후 와우산로 을 따라 15m 이동 ",
+        "direction": "",
+        "nearPoiName": "세븐일레븐 홍대정문점",
+        "nearPoiX": "0.0",
+        "nearPoiY": "0.0",
+        "intersectionName": "홍익대앞",
+        "facilityType": "11",
+        "facilityName": "",
+        "turnType": 13,
+        "pointType": "GP"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            126.92448466484962,
+            37.5528441953326
+          ],
+          [
+            126.92437356512016,
+            37.552799754067905
+          ],
+          [
+            126.92432912519702,
+            37.55278308854395
+          ]
+        ]
+      },
+      "properties": {
+        "index": 26,
+        "lineIndex": 13,
+        "name": "와우산로",
+        "description": "와우산로, 15m",
+        "distance": 15,
+        "time": 11,
+        "roadType": 21,
+        "categoryRoadType": 1,
+        "facilityType": "11",
+        "facilityName": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.92432912519702,
+          37.55278308854395
+        ]
+      },
+      "properties": {
+        "index": 27,
+        "pointIndex": 13,
+        "name": "%EB%8F%84%EC%B0%A9",
+        "description": "도착",
+        "direction": "",
+        "nearPoiName": "%EB%8F%84%EC%B0%A9",
+        "nearPoiX": "0.0",
+        "nearPoiY": "0.0",
+        "intersectionName": "홍익대앞",
+        "facilityType": "",
+        "facilityName": "",
+        "turnType": 201,
+        "pointType": "EP"
+      }
+    }
+  ]
+}

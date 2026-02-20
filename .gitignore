@@ -1,0 +1,32 @@
+# IDE
+*.iml
+.idea/
+.idea/**
+app/src/.idea/
+app/src/main/.idea/
+.DS_Store
+
+# Local config (secret)
+local.properties
+app/google-services.json
+
+# Build outputs
+.gradle/
+.gradle-user-home/
+build/
+app/build/
+captures/
+.externalNativeBuild/
+.cxx/
+.tmp_visualizer/
+.tmp_visualizer_classes.jar
+_build_info.log
+*.log
+
+# Signing keys
+*.jks
+*.keystore
+*.p12
+
+# Large media assets
+app/src/main/res/raw/

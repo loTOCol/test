@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WalkWriteActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="15"
+        android:background="@color/white"
+        android:divider="@color/black">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/layout_divider">
+
+
+            <ImageButton
+                android:background="@color/transparent"
+                android:id="@+id/back_walkwrite"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center|start"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="2dp"
+                app:srcCompat="@drawable/arrowback" />
+
+            <TextView
+                android:gravity="center|start"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="산책 메이트 글쓰기" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="출발지"
+                android:textColor="@color/black"
+                android:textSize="17dp" />
+
+            <Button
+                android:id="@+id/search_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/search_box"
+                android:drawableRight="@drawable/search_icon_writing"
+                android:text="출발지 설정"
+                android:textSize="15dp"
+                android:textColor="#88000000"
+                android:textAlignment="textStart"
+                android:paddingStart="20dp"
+                android:paddingEnd="10dp" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/layout_divider">
+
+
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/pin_walk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/pin_writing"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/StartLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="출발지가 이곳에 표시됩니다."
+                android:textColor="#AA000000"
+                android:textSize="16dp"
+                android:background="@drawable/layout_divider"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintStart_toEndOf="@id/pin_walk"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="출발 시간"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+
+
+            <EditText
+                android:id="@+id/year_walk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="20dp"
+                android:ems="4"
+                android:inputType="numberDecimal"
+                android:hint="2022"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/년"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="년"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/month_walk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:ems="2"
+                android:inputType="numberDecimal"
+                android:hint="10"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/월"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="월"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/day_walk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:ems="2"
+                android:inputType="numberDecimal"
+                android:hint="20"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/일"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="일"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <ImageButton
+                android:id="@+id/selectdate_walkwrite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/calendar_icon_xml"
+                android:background="@color/transparent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="9dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@drawable/layout_divider">
+
+
+            <EditText
+                android:id="@+id/hour_walk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="120dp"
+                android:ems="2"
+                android:inputType="numberDecimal"
+                android:hint="14"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/시"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/min_walk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:ems="2"
+                android:inputType="numberDecimal"
+                android:hint="30"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/분"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="분"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <ImageButton
+                android:id="@+id/selecttime_walkwrite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_clock_btn"
+                android:background="@color/transparent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="9dp"
+                android:layout_marginLeft="10dp" />
+
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="예상 이동 시간"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@drawable/layout_divider">
+
+            <EditText
+                android:id="@+id/minute_walk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="20dp"
+                android:ems="3"
+                android:inputType="numberDecimal"
+                android:hint="25"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="분"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="메이트 필터링"
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="@drawable/layout_divider">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="성별"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <Spinner
+                android:overlapAnchor="false"
+                android:spinnerMode="dropdown"
+                android:dropDownWidth="100dp"
+                android:overScrollMode="ifContentScrolls"
+                android:id="@+id/spinner_sex"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/array_sex"
+                android:layout_marginLeft="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="나이"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <Spinner
+                android:overlapAnchor="false"
+                android:spinnerMode="dropdown"
+                android:dropDownWidth="100dp"
+                android:id="@+id/spinner_age"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:entries="@array/array_age"
+                android:layout_marginLeft="10dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+
+            <Button
+                android:id="@+id/finish_walk"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="완료"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:background="@drawable/round_shape"
+                android:backgroundTint="@color/orange"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

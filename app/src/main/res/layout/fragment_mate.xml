@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_music_home_gradient"
+    tools:context=".feature.mate.ui.MateFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_home_topbar"
+            android:paddingHorizontal="10dp">
+
+            <TextView
+                android:id="@+id/text_viewmode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="보기"
+                android:textColor="@color/music_text_main"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <Spinner
+                android:id="@+id/spinner_viewmode_matefrag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:entries="@array/array_viewmode_mate"
+                app:layout_constraintStart_toEndOf="@id/text_viewmode"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <ImageButton
+                android:id="@+id/search_matefrag"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/icon_edit_xml"
+                android:background="@drawable/bg_music_icon_button"
+                android:padding="10dp"
+                android:tint="@color/white"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/inline_search_matelist"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp">
+
+            <Spinner
+                android:id="@+id/spinner_inline_search_mode_mate"
+                android:layout_width="92dp"
+                android:layout_height="34dp"
+                android:background="@drawable/bg_home_soft_button" />
+
+            <EditText
+                android:id="@+id/et_inline_search_mate"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_mate_filter_input"
+                android:hint="검색어"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:paddingHorizontal="10dp"
+                android:textColor="@color/music_text_main"
+                android:textColorHint="@color/music_text_sub"
+                android:textSize="13sp" />
+
+            <ImageButton
+                android:id="@+id/btn_inline_search_apply"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/bg_music_action_button"
+                android:padding="8dp"
+                android:src="@drawable/ic_inline_search"
+                android:tint="@color/white" />
+
+            <ImageButton
+                android:id="@+id/btn_inline_search_clear"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/bg_home_soft_button"
+                android:padding="8dp"
+                android:src="@drawable/ic_inline_clear"
+                android:tint="@color/music_primary" />
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_marginBottom="60dp"
+            android:layout_weight="12"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="6dp"
+            android:orientation="vertical">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/refresh_matelist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ListView
+                    android:id="@+id/matelist"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_board_list_container"
+                    android:clipToPadding="false"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="6dp"
+                    android:listSelector="@android:color/transparent"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="108dp" />
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            <LinearLayout
+                android:visibility="invisible"
+                android:id="@+id/searchlayout_matefrag"
+                android:background="@drawable/bg_mate_filter_panel"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:background="@drawable/layout_divider">
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:padding="10dp"
+                        android:textSize="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="지역 선택" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="vertical"
+                    android:layout_weight="3"
+                    android:background="@drawable/layout_divider">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <CheckBox
+                            android:id="@+id/radio1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="전체"
+                            android:layout_marginLeft="5dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <CheckBox
+                            android:id="@+id/radio2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="서울/경기"
+                            android:layout_marginLeft="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/radio1"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <CheckBox
+                            android:id="@+id/radio3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="인천"
+                            android:layout_marginLeft="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/radio2"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <CheckBox
+                            android:id="@+id/radio4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="강원도"
+                            android:layout_marginLeft="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/radio3"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <CheckBox
+                            android:id="@+id/radio5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="충청남도"
+                            android:layout_marginLeft="5dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <CheckBox
+                            android:id="@+id/radio6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="충청북도"
+                            android:layout_marginLeft="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/radio5"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <CheckBox
+                            android:id="@+id/radio14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="대전"
+                            android:layout_marginLeft="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/radio6"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <CheckBox
+                            android:id="@+id/radio15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="울산"
+                            android:layout_marginLeft="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/radio14"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <CheckBox
+                            android:id="@+id/radio9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="경상남도"
+                            android:layout_marginLeft="5dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <CheckBox
+                            android:id="@+id/radio10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="경상북도"
+                            android:layout_marginLeft="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/radio9"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <CheckBox
+                            android:id="@+id/radio11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="부산"
+                            android:layout_marginLeft="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/radio10"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <CheckBox
+                            android:id="@+id/radio12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="대구"
+                            android:layout_marginLeft="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/radio11"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <CheckBox
+                            android:id="@+id/radio7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="전라남도"
+                            android:layout_marginLeft="5dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <CheckBox
+                            android:id="@+id/radio8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="전라북도"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/radio7"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <CheckBox
+                            android:id="@+id/radio13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="광주"
+                            android:layout_marginLeft="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/radio8"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <CheckBox
+                            android:id="@+id/radio16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="제주도"
+                            android:layout_marginLeft="20dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/radio13"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="시작 날짜"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="bold"/>
+
+
+                    <EditText
+                        android:id="@+id/year_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/bg_mate_filter_input"
+                        android:paddingHorizontal="8dp"
+                        android:ems="4"
+                        android:inputType="numberDecimal"
+                        android:hint="2022"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:id="@+id/년_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="년"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/month_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/bg_mate_filter_input"
+                        android:paddingHorizontal="8dp"
+                        android:ems="2"
+                        android:inputType="numberDecimal"
+                        android:hint="10"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:id="@+id/월_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="월"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/day_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/bg_mate_filter_input"
+                        android:paddingHorizontal="8dp"
+                        android:ems="2"
+                        android:inputType="numberDecimal"
+                        android:hint="20"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:id="@+id/일_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="일"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+
+                    <ImageButton
+                        android:id="@+id/start_matefrag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/calendar_icon_btn"
+                        android:background="@color/transparent"
+                        android:layout_marginLeft="15dp"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/layout_divider">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="종료 날짜"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/year_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/bg_mate_filter_input"
+                        android:paddingHorizontal="8dp"
+                        android:ems="4"
+                        android:inputType="numberDecimal"
+                        android:hint="2022"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:id="@+id/년_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="년"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/month_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/bg_mate_filter_input"
+                        android:paddingHorizontal="8dp"
+                        android:ems="2"
+                        android:inputType="numberDecimal"
+                        android:hint="10"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:id="@+id/월_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="월"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/day_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/bg_mate_filter_input"
+                        android:paddingHorizontal="8dp"
+                        android:ems="2"
+                        android:inputType="numberDecimal"
+                        android:hint="20"
+                        android:textAlignment="center"/>
+
+                    <TextView
+                        android:id="@+id/일_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="일"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
+
+                    <ImageButton
+                        android:id="@+id/end_matefrag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/calendar_icon_btn"
+                        android:background="@color/transparent"
+                        android:layout_marginLeft="15dp"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_divider">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/layout_divider_horizon">
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="성별"
+                            android:textSize="15dp"
+                            android:layout_marginLeft="10dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Spinner
+                            android:id="@+id/spinner_sex_matefrag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/array_sex"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="나이"
+                            android:textSize="15dp"
+                            android:layout_marginLeft="10dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <Spinner
+                            android:id="@+id/spinner_age_matefrag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/array_age"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:padding="5dp">
+
+                    <Button
+                        android:layout_marginHorizontal="20dp"
+                        android:id="@+id/finishSetting_matefrag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_music_action_button"
+                        android:paddingHorizontal="25dp"
+                        android:text="설정 적용"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:layout_marginHorizontal="20dp"
+                        android:id="@+id/clearSetting_matefrag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_home_soft_button"
+                        android:paddingHorizontal="25dp"
+                        android:text="설정 초기화"
+                        android:textColor="@color/music_text_main"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/paging_matelist"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="54dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_prev_page_mate"
+                    android:layout_width="80dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/bg_home_soft_button"
+                    android:text="이전"
+                    android:textAllCaps="false"
+                    android:textColor="@color/music_text_main"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_page_indicator_mate"
+                    android:layout_width="84dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="1 / 1"
+                    android:textColor="@color/music_text_main"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_next_page_mate"
+                    android:layout_width="80dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/bg_music_action_button"
+                    android:text="다음"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingHorizontal="14dp"
+                android:gravity="center"
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:background="@drawable/bg_music_action_button"
+                    android:id="@+id/add_matelist"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="9dp"
+                    android:tint="@color/white"
+                    android:src="@drawable/add_xml"/>
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+</FrameLayout>

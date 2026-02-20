@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_viewmode">
+        <item>내 게시물 제외</item>
+        <item>내 게시물</item>
+        <item>신청 게시물</item>
+        <item>전체 게시물</item>
+    </string-array>
+
+</resources>

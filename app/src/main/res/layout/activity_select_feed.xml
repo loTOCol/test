@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".SelectFeedActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/emotionlayout"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:background="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:background="@drawable/empty_gray_no_radius"
+                    android:id="@+id/angry"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/feeling_angry_xml"/>
+                <ImageButton
+                    android:background="@drawable/empty_gray_no_radius"
+                    android:id="@+id/crying"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/feeling_crying_xml"/>
+                <ImageButton
+                    android:background="@drawable/empty_gray_no_radius"
+                    android:id="@+id/heart"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/feeling_heart_xml"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:background="@drawable/empty_gray_no_radius"
+                    android:id="@+id/neutral"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/feeling_neutral_xml"/>
+                <ImageButton
+                    android:background="@drawable/empty_gray_no_radius"
+                    android:id="@+id/smile"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/feeling_smiling_xml"/>
+                <ImageButton
+                    android:background="@drawable/empty_gray_no_radius"
+                    android:id="@+id/tired"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/feeling_tired_xml"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@color/white"
+            android:id="@+id/weatherlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:background="@drawable/empty_gray_no_radius"
+                    android:id="@+id/cloudy"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/weather_cloudy_xml"/>
+                <ImageButton
+                    android:background="@drawable/empty_gray_no_radius"
+                    android:id="@+id/fog"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/weather_fog_xml"/>
+                <ImageButton
+                    android:background="@drawable/empty_gray_no_radius"
+                    android:id="@+id/moon"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/weather_moon_xml"/>
+                <ImageButton
+                    android:background="@drawable/empty_gray_no_radius"
+                    android:id="@+id/rainbow"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/weather_rainbow_xml"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:background="@drawable/empty_gray_no_radius"
+                    android:id="@+id/rainy"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/weather_rainy_xml"/>
+                <ImageButton
+                    android:background="@drawable/empty_gray_no_radius"
+                    android:id="@+id/snow"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/weather_snow_xml"/>
+                <ImageButton
+                    android:background="@drawable/empty_gray_no_radius"
+                    android:id="@+id/sunny"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/weather_sunny_xml"/>
+                <ImageButton
+                    android:background="@drawable/empty_gray_no_radius"
+                    android:id="@+id/windy"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/weather_windy_xml"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

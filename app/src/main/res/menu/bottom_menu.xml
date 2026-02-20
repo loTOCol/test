@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/walk"
+        android:enabled="true"
+        android:title="메인"
+        android:icon="@drawable/dd_main_xml"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/mate"
+        android:enabled="true"
+        android:title="게시판"
+        android:icon="@drawable/dd_ga_xml"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/trace"
+        android:enabled="true"
+        android:title="기록"
+        android:icon="@drawable/dd_walk_xml"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/feed"
+        android:enabled="true"
+        android:title="캘린더"
+        android:icon="@drawable/dd_cal_xml"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/last"
+        android:enabled="true"
+        android:title="채팅"
+        android:icon="@drawable/dd_chat_xml"
+        app:showAsAction="always"/>
+</menu>

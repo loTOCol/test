@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_music_home_gradient">
+
+    <ScrollView
+        android:id="@+id/scrollView_mate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_home_topbar"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="10dp">
+
+                <ImageButton
+                    android:id="@+id/back_mate"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/bg_music_icon_button"
+                    android:padding="9dp"
+                    android:src="@drawable/arrowback"
+                    android:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="메이트 모집 글쓰기"
+                    android:textColor="@color/music_text_main"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_mate_filter_panel"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/제목"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="제목"
+                    android:textColor="@color/music_text_main"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/title_mate"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_mate_filter_input"
+                    android:hint="제목을 입력해 주세요."
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingHorizontal="12dp"
+                    android:textColor="@color/music_text_main"
+                    android:textColorHint="@color/music_text_sub"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_mate_filter_panel"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/출발지"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="목적지 추가"
+                    android:textColor="@color/music_text_main"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/search_mate"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_mate_filter_input"
+                    android:drawableEnd="@drawable/search_icon_writing"
+                    android:gravity="start|center_vertical"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="목적지 검색 후 추가해 주세요. (2개 이상)"
+                    android:textAllCaps="false"
+                    android:textColor="@color/music_text_sub"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_feed_map_card"
+                android:orientation="vertical"
+                android:padding="6dp">
+
+                <fragment
+                    android:id="@+id/matewriteMap"
+                    android:name="com.naver.maps.map.MapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:navermap_scrollGesturesEnabled="false"
+                    tools:layout="@layout/activity_feed_write" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/loclist_mate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_mate_filter_panel"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="4dp"
+                android:padding="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_mate_filter_panel"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/출발시간"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="출발 시간 (비워두면 현재 시간)"
+                    android:textColor="@color/music_text_main"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/year_mate"
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/bg_mate_filter_input"
+                        android:ems="4"
+                        android:gravity="center"
+                        android:hint="2022"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/music_text_main"
+                        android:textColorHint="@color/music_text_sub"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/년"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="년"
+                        android:textColor="@color/music_text_main"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/month_mate"
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_mate_filter_input"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="10"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/music_text_main"
+                        android:textColorHint="@color/music_text_sub"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/월"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="월"
+                        android:textColor="@color/music_text_main"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/day_mate"
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_mate_filter_input"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="20"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/music_text_main"
+                        android:textColorHint="@color/music_text_sub"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/일"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="일"
+                        android:textColor="@color/music_text_main"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/selectdate_matewrite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/bg_home_soft_button"
+                        android:paddingHorizontal="12dp"
+                        android:text="날짜 선택"
+                        android:textAllCaps="false"
+                        android:textColor="@color/music_primary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/hour_mate"
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_mate_filter_input"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="14"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/music_text_main"
+                        android:textColorHint="@color/music_text_sub"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/시"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="시"
+                        android:textColor="@color/music_text_main"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/min_mate"
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_mate_filter_input"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="30"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/music_text_main"
+                        android:textColorHint="@color/music_text_sub"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/분"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="분"
+                        android:textColor="@color/music_text_main"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/selecttime_matewrite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/bg_home_soft_button"
+                        android:paddingHorizontal="12dp"
+                        android:text="시간 선택"
+                        android:textAllCaps="false"
+                        android:textColor="@color/music_primary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_mate_filter_panel"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/이동시간"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="예상 운동 시간"
+                    android:textColor="@color/music_text_main"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/taken_time_day"
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_mate_filter_input"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:text="0"
+                        android:textColor="@color/music_text_main"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="일"
+                        android:textColor="@color/music_text_main"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/taken_time_hour"
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_mate_filter_input"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:inputType="numberDecimal"
+                        android:text="0"
+                        android:textColor="@color/music_text_main"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="시간"
+                        android:textColor="@color/music_text_main"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/taken_time_minute"
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_mate_filter_input"
+                        android:ems="2"
+                        android:gravity="center"
+                        android:hint="25"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/music_text_main"
+                        android:textColorHint="@color/music_text_sub"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/몇분"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="분"
+                        android:textColor="@color/music_text_main"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_mate_filter_panel"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/필터링"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="메이트 필터링"
+                    android:textColor="@color/music_text_main"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/성별"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="성별"
+                        android:textColor="@color/music_text_main"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinner_sex_mate"
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_mate_filter_input"
+                        android:entries="@array/array_sex" />
+
+                    <TextView
+                        android:id="@+id/나이"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="나이"
+                        android:textColor="@color/music_text_main"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinner_age_mate"
+                        android:layout_width="0dp"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_mate_filter_input"
+                        android:entries="@array/array_age" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_mate_filter_panel"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/contents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="내용"
+                    android:textColor="@color/music_text_main"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/contents_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_mate_filter_input"
+                    android:gravity="top|start"
+                    android:hint="예비 메이트에게 전하고 싶은 내용을 적어주세요."
+                    android:inputType="textMultiLine"
+                    android:padding="12dp"
+                    android:textColor="@color/music_text_main"
+                    android:textColorHint="@color/music_text_sub"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/finish_mate"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_music_action_button"
+                android:text="게시글 등록"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

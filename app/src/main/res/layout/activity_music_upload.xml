@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beige">
+
+
+    <ImageView
+        android:id="@+id/top_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tree" />
+
+    <!-- 중앙에 배치된 요소들 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/music_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="업로드된 음악 정보"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/upload_music_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="음악 업로드"
+            android:backgroundTint="@color/brown"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/play_music_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="확인"
+            android:backgroundTint="@color/brown"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <!-- 왼쪽 아래에 추가된 이미지 공간 -->
+    <ImageView
+        android:id="@+id/image_view_additional"
+        android:layout_width="197dp"
+        android:layout_height="214dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/gfmusic" />
+
+</RelativeLayout>

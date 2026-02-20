@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    >
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="WalkingMate 임시 메인화면"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginHorizontal="40dp"
+        android:gravity="center"
+        android:layout_weight="5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/tmplogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="도보 기록" />
+
+        <Button
+            android:id="@+id/gocal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="피드 캘린더" />
+
+        <Button
+            android:id="@+id/gowalkwrite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="산책게시물작성" />
+
+        <Button
+            android:id="@+id/gotest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="메이트게시물작성" />
+
+        <Button
+            android:id="@+id/uitest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UI test"
+
+            />
+
+        <Button
+            android:id="@+id/gofb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Firebase Test" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <Button
+            android:id="@+id/testbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="샘플생성"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/permission"
+            app:layout_constraintVertical_bias="0.48" />
+
+        <EditText
+            android:id="@+id/testText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="년월일순으로(20220203)"
+            android:inputType="numberDecimal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/testbtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/permission" />
+
+        <Button
+            android:id="@+id/permission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="권한설정이 필요합니다.(이동)"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/permlist"
+            app:layout_constraintVertical_bias="0.045" />
+
+        <TextView
+            android:id="@+id/permlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.129" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

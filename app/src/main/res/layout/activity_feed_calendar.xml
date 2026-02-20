@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Calendar_Layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WalkingHomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_music_home_gradient"
+        android:orientation="vertical"
+        android:paddingHorizontal="14dp"
+        android:paddingTop="14dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:background="@drawable/bg_home_topbar"
+            android:paddingHorizontal="12dp">
+
+            <ImageButton
+                android:id="@+id/menu_calendar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_home_soft_button"
+                android:contentDescription="menu"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/menu_icon"
+                app:tint="@color/music_primary" />
+
+            <TextView
+                android:id="@+id/fragtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/scdream9"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="워킹 홈"
+                android:textColor="@color/music_text_main"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/top_giraffe_mascot"
+                app:layout_constraintStart_toEndOf="@id/menu_calendar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/top_giraffe_mascot"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:cardUseCompatPadding="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/menu_photo_toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="photo_toggle"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/photo_toggle_1" />
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="12dp">
+
+            <FrameLayout
+                android:id="@+id/Chatcontainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:id="@+id/mainLayout_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_home_calendar_card"
+                android:orientation="vertical"
+                android:paddingHorizontal="14dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="72dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_home_soft_button"
+                        android:gravity="center_horizontal"
+                        android:paddingHorizontal="14dp"
+                        android:paddingVertical="7dp"
+                        android:text="년도"
+                        android:textColor="@color/music_text_main"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end|center_vertical"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/feedbtn"
+                            android:layout_width="98dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/bg_home_soft_button"
+                            android:elevation="0dp"
+                            android:text="기록 보기"
+                            android:textAllCaps="false"
+                            android:textColor="@color/music_text_main"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:id="@+id/plusbtn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/bg_music_icon_button"
+                            android:contentDescription="add_feed"
+                            android:padding="10dp"
+                            android:src="@drawable/add_xml"
+                            android:tint="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/calendar_hint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="날짜를 선택한 뒤 +를 누르면 해당 날짜 기록을 바로 작성합니다."
+                    android:textColor="@color/music_text_sub"
+                    android:textSize="12sp" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_home_soft_button"
+                    android:padding="8dp">
+
+                    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                        android:id="@+id/calendarView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:theme="@style/CalenderViewCustom"
+                        app:mcv_dateTextAppearance="@style/CalenderViewDateCustomText"
+                        app:mcv_selectionMode="single"
+                        app:mcv_weekDayTextAppearance="@style/CalenderViewWeekCustomText" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/streak_widget"
+                    android:layout_width="match_parent"
+                    android:layout_height="84dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_mate_filter_panel"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="12dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/streak_current_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0일"
+                            android:textColor="@color/music_text_main"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="현재 연속"
+                            android:textColor="@color/music_text_sub"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="40dp"
+                        android:background="@color/music_card_stroke" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/streak_month_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0회"
+                            android:textColor="@color/music_text_main"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="이번 달 기록"
+                            android:textColor="@color/music_text_sub"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="40dp"
+                        android:background="@color/music_card_stroke" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/streak_best_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0일"
+                            android:textColor="@color/music_text_main"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="최고 연속"
+                            android:textColor="@color/music_text_sub"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/bg_home_topbar"
+                android:layout_marginBottom="2dp"
+                app:itemBackground="@color/transparent"
+                app:itemIconTint="@color/bottom_menu_color"
+                app:itemTextColor="@color/black"
+                app:labelVisibilityMode="labeled"
+                app:menu="@menu/bottom_menu" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView_calendar"
+        android:layout_width="320dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="@drawable/bg_home_calendar_card"
+        android:theme="@style/NavigationDrawerStyle"
+        app:headerLayout="@layout/view_user_mypage_header"
+        app:itemBackground="@drawable/bg_sidebar_menu_item"
+        app:itemHorizontalPadding="16dp"
+        app:itemIconPadding="18dp"
+        app:itemIconSize="20dp"
+        app:itemIconTint="@color/music_primary"
+        app:itemTextAppearance="@style/itemDrawerTextStyle"
+        app:itemTextColor="@color/music_text_main"
+        app:itemVerticalPadding="6dp"
+        app:menu="@menu/mypagemenu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

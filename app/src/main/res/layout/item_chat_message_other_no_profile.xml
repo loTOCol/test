@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:paddingEnd="52dp"
+    android:paddingStart="44dp"
+    android:gravity="start"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:maxWidth="200dp"
+                android:id="@+id/msg_othersno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/bg_chat_bubble_other"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="9dp"
+                android:text="Tidd"
+                android:textColor="@color/music_text_main"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/emoji_image_others"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/time_othersno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textColor="@color/music_text_sub"
+                android:textSize="11sp"
+                android:text="2022/12/5 12:33" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

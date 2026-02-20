@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#FF0000FF</color>
+    <color name="red">#FFFF0000</color>
+    <color name="blurblue">#800000FF</color>
+    <color name="blurred">#80FF0000</color>
+    <color name="gray">#FF888888</color>
+
+    <!--이 아래는 주로 사용되는 커스텀 컬러-->
+
+    <color name="brightgray">#FFD9D9D9</color>   <!--달력하단 아이콘, 채팅 박스, 메이트게시글-장소 박스에 사용-->
+    <color name="emptygray">#FFEFEFEF</color>       <!--피드작성시 사진 업로드할 공백박스에 사용-->
+    <color name="orange">#FFEBBE</color>       <!--주황색-->
+    <color name="blurorange">#FFEBBE</color>       <!--연한 주황색, 사이드바와 클릭 안 한 산책핀-->
+    <color name="transparent">#00000000</color>  <!--투명-->
+    <color name="brightgreen">#FFCEE5D0</color>  <!--연초록, 채팅 박스, 프로필 박스에 사용-->
+    <color name="writegray">#FFF5F5F5</color>  <!--연 회색류. 글자쓰기용 박스-->
+    <color name="feedgreen">#FF7AFF97</color>   <!--연초록류. 피드페이지 이동거리-->
+    <color name="darkgray">#FF494949</color>
+    <color name="blurblack">#22000000</color> <!--연검정, 로딩창용-->
+    <color name="greenboxline">#FFF3F0D7</color>  <!--산책창 박스-->
+
+    <color name="beige">#FFEBBE</color>
+    <color name="yellow">#F8CD64</color>
+    <color name="brown">#8F6C44</color>
+
+    <color name="gf_graph1">#4E4E4E</color>
+    <color name="gf_graph2">#747474</color>
+    <color name="gf_graph3">#F5D453</color>
+
+    <!-- Music UI v2 -->
+    <color name="music_bg_top">#FFF7E6</color>
+    <color name="music_bg_bottom">#FFEAD0B8</color>
+    <color name="music_card">#FFFDF7</color>
+    <color name="music_card_stroke">#FFE2C28C</color>
+    <color name="music_primary">#FF8F6C44</color>
+    <color name="music_primary_dark">#FF6F5233</color>
+    <color name="music_accent">#FFF5D453</color>
+    <color name="music_text_main">#FF2A2117</color>
+    <color name="music_text_sub">#FF6A5A45</color>
+
+</resources>

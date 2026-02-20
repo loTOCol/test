@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_music_home_gradient"
+    android:orientation="vertical"
+    android:paddingHorizontal="12dp"
+    android:paddingTop="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_feed_topbar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp">
+
+        <ImageButton
+            android:id="@+id/back_challenge"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_home_soft_button"
+            android:contentDescription="뒤로가기"
+            android:padding="10dp"
+            app:srcCompat="@drawable/arrowback"
+            app:tint="@color/music_primary" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:text="도전 과제"
+            android:textColor="@color/music_text_main"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/question_challenge"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_home_soft_button"
+            android:contentDescription="도움말"
+            android:padding="10dp"
+            app:srcCompat="@drawable/question"
+            app:tint="@color/music_primary" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="14dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="각 과제별로 5단계 칭호를 획득할 수 있어요."
+                android:textColor="@color/music_text_sub"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_feed_post_card"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:id="@+id/steptxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="건강한 워커 (0/5)"
+                    android:textColor="@color/music_text_main"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageButton android:id="@+id/step1" style="@style/ChallengeBadgeButton" android:src="@drawable/achieve_walk_xml" />
+                    <ImageButton android:id="@+id/step2" style="@style/ChallengeBadgeButton" android:src="@drawable/achieve_walk_xml" />
+                    <ImageButton android:id="@+id/step3" style="@style/ChallengeBadgeButton" android:src="@drawable/achieve_walk_xml" />
+                    <ImageButton android:id="@+id/step4" style="@style/ChallengeBadgeButton" android:src="@drawable/achieve_walk_xml" />
+                    <ImageButton android:id="@+id/step5" style="@style/ChallengeBadgeButton" android:src="@drawable/achieve_walk_xml" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_feed_post_card"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:id="@+id/reltxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="믿음직한 워커 (0/5)"
+                    android:textColor="@color/music_text_main"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageButton android:id="@+id/rel1" style="@style/ChallengeBadgeButton" android:src="@drawable/achieve_trust_xml" />
+                    <ImageButton android:id="@+id/rel2" style="@style/ChallengeBadgeButton" android:src="@drawable/achieve_trust_xml" />
+                    <ImageButton android:id="@+id/rel3" style="@style/ChallengeBadgeButton" android:src="@drawable/achieve_trust_xml" />
+                    <ImageButton android:id="@+id/rel4" style="@style/ChallengeBadgeButton" android:src="@drawable/achieve_trust_xml" />
+                    <ImageButton android:id="@+id/rel5" style="@style/ChallengeBadgeButton" android:src="@drawable/achieve_trust_xml" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_feed_post_card"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:id="@+id/seqtxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="꾸준한 워커 (0/5)"
+                    android:textColor="@color/music_text_main"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageButton android:id="@+id/seq1" style="@style/ChallengeBadgeButton" android:src="@drawable/achieve_planner_xml" />
+                    <ImageButton android:id="@+id/seq2" style="@style/ChallengeBadgeButton" android:src="@drawable/achieve_planner_xml" />
+                    <ImageButton android:id="@+id/seq3" style="@style/ChallengeBadgeButton" android:src="@drawable/achieve_planner_xml" />
+                    <ImageButton android:id="@+id/seq4" style="@style/ChallengeBadgeButton" android:src="@drawable/achieve_planner_xml" />
+                    <ImageButton android:id="@+id/seq5" style="@style/ChallengeBadgeButton" android:src="@drawable/achieve_planner_xml" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_feed_post_card"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:id="@+id/meettxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="사교적인 워커 (0/5)"
+                    android:textColor="@color/music_text_main"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageButton android:id="@+id/meet1" style="@style/ChallengeBadgeButton" android:src="@drawable/achieve_laugh_xml" />
+                    <ImageButton android:id="@+id/meet2" style="@style/ChallengeBadgeButton" android:src="@drawable/achieve_laugh_xml" />
+                    <ImageButton android:id="@+id/meet3" style="@style/ChallengeBadgeButton" android:src="@drawable/achieve_laugh_xml" />
+                    <ImageButton android:id="@+id/meet4" style="@style/ChallengeBadgeButton" android:src="@drawable/achieve_laugh_xml" />
+                    <ImageButton android:id="@+id/meet5" style="@style/ChallengeBadgeButton" android:src="@drawable/achieve_laugh_xml" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

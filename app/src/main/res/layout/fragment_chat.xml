@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home_calendar_card"
+    tools:context=".ChatFragment">
+
+    <LinearLayout
+        android:id="@+id/chatToplayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_board_chip"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="6dp"
+            android:text="참여 중인 채팅방"
+            android:textColor="@color/music_text_main"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/ChatroomList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_board_list_container"
+            android:clipToPadding="false"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="8dp"
+            android:listSelector="@android:color/transparent"
+            android:padding="8dp" />
+
+        <LinearLayout
+            android:id="@+id/chat_paging"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_home_soft_button"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/chat_prev_page"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:background="@drawable/bg_home_soft_button"
+                android:padding="8dp"
+                android:src="@drawable/arrowback"
+                android:tint="@color/music_primary" />
+
+            <TextView
+                android:id="@+id/chat_page_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:text="1 / 1"
+                android:textColor="@color/music_text_main"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/chat_next_page"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:background="@drawable/bg_home_soft_button"
+                android:padding="8dp"
+                android:rotation="180"
+                android:src="@drawable/arrowback"
+                android:tint="@color/music_primary" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

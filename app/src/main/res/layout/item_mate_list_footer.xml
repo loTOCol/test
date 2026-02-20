@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="84dp"
+    android:paddingHorizontal="10dp"
+    android:paddingTop="6dp">
+
+    <TextView
+        android:background="@drawable/bg_mate_post_card"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="10dp"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:id="@+id/lastviewtxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/music_text_sub"
+        android:textStyle="bold"
+        android:text="이전 게시물 자동 불러오는 중" />
+</LinearLayout>

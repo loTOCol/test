@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/group_main"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/settingprofile"
+            android:icon="@drawable/ic_board_chevron"
+            android:title="프로필 설정" />
+
+        <item
+            android:id="@+id/schedules"
+            android:icon="@drawable/ic_board_chevron"
+            android:title="약속 목록" />
+
+        <item
+            android:id="@+id/challenge"
+            android:icon="@drawable/ic_board_chevron"
+            android:title="도전 과제" />
+
+        <item
+            android:id="@+id/coinshop"
+            android:icon="@drawable/ic_board_chevron"
+            android:title="코인 샵" />
+
+        <item
+            android:id="@+id/managefriends"
+            android:icon="@drawable/ic_board_chevron"
+            android:title="차단 유저 관리" />
+
+        <item
+            android:id="@+id/helpinfo"
+            android:icon="@drawable/ic_board_chevron"
+            android:title="도움말" />
+
+        <item
+            android:id="@+id/appinfo"
+            android:icon="@drawable/ic_board_chevron"
+            android:title="로그아웃" />
+    </group>
+</menu>

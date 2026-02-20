@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+
+    <TextView
+        android:id="@+id/notification_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Music Title"
+        android:textSize="16sp"/>
+
+    <ImageButton
+        android:id="@+id/notification_prev_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/btn_play_pre"/>
+
+    <ImageButton
+        android:id="@+id/notification_play_pause_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/notification_prev_button"
+        android:layout_centerVertical="true"
+        android:src="@drawable/btn_pause"/>
+
+    <ImageButton
+        android:id="@+id/notification_next_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/notification_play_pause_button"
+        android:layout_centerVertical="true"
+        android:src="@drawable/btn_play_next"
+        android:contentDescription="@string/next"/>
+</RelativeLayout>

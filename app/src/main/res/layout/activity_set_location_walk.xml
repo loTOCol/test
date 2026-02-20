@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/search_loc_setloc"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="@drawable/search_box"
+            android:drawableRight="@drawable/search_icon_writing"
+            android:hint="주소명으로 위치 검색"
+            android:inputType="textPersonName"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp" />
+
+        <Button
+            android:background="@drawable/plusbtn"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="5dp"
+            android:id="@+id/goloc_walk"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="이동" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/set_loc_walk_mapLayout"
+        android:layout_weight="8"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical">
+
+        <fragment
+            android:id="@+id/SetLocationMap"
+            android:name="com.naver.maps.map.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/activity_feed_write" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/finish_setloc"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:background="@drawable/orangebtn"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:text="완료" />
+</LinearLayout>

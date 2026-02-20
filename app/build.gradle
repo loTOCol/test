@@ -1,0 +1,128 @@
+import java.util.Properties
+
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+def localProps = new Properties()
+def localPropsFile = rootProject.file("local.properties")
+if (localPropsFile.exists()) {
+    localPropsFile.withInputStream { stream ->
+        localProps.load(stream)
+    }
+}
+
+def readSecret = { String key, String defaultValue = "" ->
+    return localProps.getProperty(key, defaultValue)
+}
+
+def asBuildConfigString = { String value ->
+    def escaped = value.replace("\\", "\\\\").replace("\"", "\\\"")
+    return "\"${escaped}\""
+}
+
+android {
+    namespace 'com.example.walkingmate'
+    // Android Gradle Plugin 8.1.0 및 Java 21 지원을 위해 compileSdk 33으로 업그레이드 (기존: 32)
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.walkingmate"
+        minSdk 31
+        // targetSdk 33으로 업그레이드 (기존: 32)
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "NAVER_OAUTH_CLIENT_ID", asBuildConfigString(readSecret("NAVER_OAUTH_CLIENT_ID"))
+        buildConfigField "String", "NAVER_OAUTH_CLIENT_SECRET", asBuildConfigString(readSecret("NAVER_OAUTH_CLIENT_SECRET"))
+        buildConfigField "String", "NAVER_OAUTH_CLIENT_NAME", asBuildConfigString(readSecret("NAVER_OAUTH_CLIENT_NAME"))
+        buildConfigField "String", "OPEN_WEATHER_API_KEY", asBuildConfigString(readSecret("OPEN_WEATHER_API_KEY"))
+        buildConfigField "String", "NAVER_SEARCH_API_KEY_ID", asBuildConfigString(readSecret("NAVER_SEARCH_API_KEY_ID"))
+        buildConfigField "String", "NAVER_SEARCH_API_KEY", asBuildConfigString(readSecret("NAVER_SEARCH_API_KEY"))
+        buildConfigField "String", "MUSIC_SERVER_BASE_URL", asBuildConfigString(readSecret("MUSIC_SERVER_BASE_URL", "http://10.0.2.2:5000/"))
+        manifestPlaceholders = [
+                NAVER_MAP_CLIENT_ID: readSecret("NAVER_MAP_CLIENT_ID")
+        ]
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        // Java 21 지원을 위해 Java 17로 업그레이드 (기존: VERSION_1_8)
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    buildFeatures {
+        buildConfig true
+    }
+}
+
+dependencies {
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0' // 원형 그래프 라이브러리
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation "androidx.emoji2:emoji2:1.0.0"
+    implementation "androidx.emoji2:emoji2-bundled:1.0.0"
+
+
+    implementation 'com.naver.maps:map-sdk:3.15.0'
+    implementation 'com.github.prolificinteractive:material-calendarview:2.0.1'
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.1.1'
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+    implementation 'com.daimajia.androidanimations:library:2.4@aar'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    // me.relex:circleindicator 버전 업데이트 (기존: 2.1.4)
+    implementation 'me.relex:circleindicator:2.1.6'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
+
+    implementation "androidx.media:media:1.2.0"
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.android.volley:volley:1.2.1'
+
+    implementation 'com.google.android.gms:play-services-location:20.0.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation files('libs/naveridlogin_android_sdk_4.2.6.aar')
+    implementation platform('com.google.firebase:firebase-bom:30.5.0')
+    implementation 'com.google.firebase:firebase-firestore'
+    implementation 'com.google.firebase:firebase-storage'
+    implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation platform("com.fasterxml.jackson:jackson-bom:2.17.2")
+    implementation "com.fasterxml.jackson.core:jackson-core"
+    implementation "com.fasterxml.jackson.core:jackson-annotations"
+    implementation "com.fasterxml.jackson.core:jackson-databind"
+
+    //music 원형 이미지뷰 만들기
+    implementation 'com.mikhaellopez:circularimageview:4.3.0'
+    implementation 'com.mikhaellopez:circularprogressbar:3.1.0'
+
+
+    //
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    // JCenter 종료로 유지보수 중인 대체 시각화 라이브러리 사용
+    implementation 'com.github.GautamChibde:android-audio-visualizer:2.2.0'
+
+
+    implementation 'com.github.akshittyagi205:HorizontalCalendarView:v1.0.0'
+
+
+
+}
+

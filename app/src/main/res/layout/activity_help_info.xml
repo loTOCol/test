@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_music_home_gradient"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_feed_topbar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp">
+
+        <ImageButton
+            android:id="@+id/back_helpinfo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_home_soft_button"
+            android:contentDescription="뒤로가기"
+            android:padding="10dp"
+            app:srcCompat="@drawable/arrowback"
+            app:tint="@color/music_primary" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:text="도움말"
+            android:textColor="@color/music_text_main"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:layout_width="110dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_feed_post_card"
+            android:paddingVertical="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/mypagebtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginHorizontal="6dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/plusbtn"
+                    android:text="마이페이지"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/challengebtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginHorizontal="6dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/plusbtn"
+                    android:text="도전과제"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/managefriendsbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="6dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/plusbtn"
+                    android:text="차단 유저"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/setprofilebtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginHorizontal="6dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/plusbtn"
+                    android:text="프로필설정"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/schedulebtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginHorizontal="6dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/plusbtn"
+                    android:text="약속목록"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/walkbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginHorizontal="6dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/plusbtn"
+                    android:text="게시판"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/matebtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="6dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/plusbtn"
+                    android:text="글쓰기"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/recordbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginHorizontal="6dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/plusbtn"
+                    android:text="기록"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/feedbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginHorizontal="6dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/plusbtn"
+                    android:text="캘린더"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/chatbtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginHorizontal="6dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/plusbtn"
+                    android:text="채팅"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/profilebtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginHorizontal="6dp"
+                    android:layout_marginVertical="4dp"
+                    android:background="@drawable/plusbtn"
+                    android:text="사용자 프로필"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <ListView
+            android:id="@+id/helplist"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_feed_post_card"
+            android:clipToPadding="false"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="8dp"
+            android:listSelector="@android:color/transparent"
+            android:padding="10dp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:paddingEnd="52dp"
+    android:gravity="start"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userimg_others"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/blank_profile"
+        android:layout_gravity="top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:gravity="start"
+            android:id="@+id/name_others"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/music_text_sub"
+            android:textSize="12sp"
+            android:text="유저아이디" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:maxWidth="200dp"
+                android:id="@+id/msg_others"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/bg_chat_bubble_other"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="9dp"
+                android:text="Tidd"
+                android:textColor="@color/music_text_main"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/emoji_image_others"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/time_others"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:textColor="@color/music_text_sub"
+                android:textSize="11sp"
+                android:text="2022/12/5 12:33" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

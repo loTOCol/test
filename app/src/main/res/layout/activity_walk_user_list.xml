@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="450dp"
+    android:background="@drawable/dialog_noradius"
+    android:id="@+id/walkuserlistbackground"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="450dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:paddingTop="5dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:background="#cee5d0"
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="수락 목록" />
+
+        <ListView
+            android:id="@+id/walkuserlist_accept"
+            android:listSelector="@color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" >
+
+        </ListView>
+
+        <TextView
+            android:paddingTop="5dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:background="#f3f0d7"
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="수락 대기 목록" />
+
+        <ListView
+            android:id="@+id/walkuserlist_waiting"
+            android:listSelector="@color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"/>
+        <Button
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:background="@color/transparent"
+            android:id="@+id/delete_walk"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="게시물 삭제" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="invisible"
+        android:id="@+id/askdel_walkuserlist"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/whiteback_gray_radius"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginBottom="10dp"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:id="@+id/title_askdel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <TextView
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="정말 삭제하시겠습니까?" />
+
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:background="@color/transparent"
+                android:id="@+id/delete_walkuser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="삭제" />
+
+            <Button
+                android:background="@color/transparent"
+                android:id="@+id/cancel_walkuser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="취소" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
