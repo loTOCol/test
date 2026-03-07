@@ -42,6 +42,7 @@ android {
         buildConfigField "String", "OPEN_WEATHER_API_KEY", asBuildConfigString(readSecret("OPEN_WEATHER_API_KEY"))
         buildConfigField "String", "NAVER_SEARCH_API_KEY_ID", asBuildConfigString(readSecret("NAVER_SEARCH_API_KEY_ID"))
         buildConfigField "String", "NAVER_SEARCH_API_KEY", asBuildConfigString(readSecret("NAVER_SEARCH_API_KEY"))
+        buildConfigField "String", "TMAP_APP_KEY", asBuildConfigString(readSecret("TMAP_APP_KEY"))
         buildConfigField "String", "MUSIC_SERVER_BASE_URL", asBuildConfigString(readSecret("MUSIC_SERVER_BASE_URL", "http://10.0.2.2:5000/"))
         manifestPlaceholders = [
                 NAVER_MAP_CLIENT_ID: readSecret("NAVER_MAP_CLIENT_ID")

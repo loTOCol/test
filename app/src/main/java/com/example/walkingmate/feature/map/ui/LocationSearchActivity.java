@@ -733,7 +733,7 @@ public class LocationSearchActivity extends AppCompatActivity implements OnMapRe
                     startX +
                     ",\"startY\":" +
                     startY +
-                    "\"endX\":" +
+                    ",\"endX\":" +
                     endX +
                     ",\"endY\":" +
                     endY +
@@ -745,12 +745,18 @@ public class LocationSearchActivity extends AppCompatActivity implements OnMapRe
                     "\",\"searchOption\":\"" +
                     searchoption +
                     "\",\"resCoordType\":\"WGS84GEO\",\"sort\":\"index\"}");
+            if (BuildConfig.TMAP_APP_KEY == null || BuildConfig.TMAP_APP_KEY.trim().isEmpty()) {
+                Log.e("루트 검색", "TMAP_APP_KEY가 비어 있습니다.");
+                startreq = false;
+                runOnUiThread(() -> Toast.makeText(getApplicationContext(), "TMAP_APP_KEY가 설정되지 않았습니다.", Toast.LENGTH_SHORT).show());
+                return;
+            }
             Request request = new Request.Builder()
                     .url("https://apis.openapi.sk.com/tmap/routes/pedestrian?version=1&callback=function")
                     .post(body)
                     .addHeader("accept", "application/json")
                     .addHeader("content-type", "application/json")
-                    .addHeader("appKey", "l7xxab136fb0e58b4e84a4a923596d9b17e6")
+                    .addHeader("appKey", BuildConfig.TMAP_APP_KEY)
                     .build();
 
             Response response = client.newCall(request).execute();
